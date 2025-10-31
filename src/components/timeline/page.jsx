@@ -254,7 +254,7 @@ const Home = ({ loadUSP }) => {
               {/* <div className={styles.bead}></div> */}
               <div className={`${styles.contentX} triggered-element`}>
                 {/* <p className={styles.timeline_number}>04</p> */}
-                <h2 className={styles.twoo}>Furniture</h2>
+                <h2 className={styles.twoo}>Furniture & Hardware</h2>
                 <p className={styles.contentInner}>Design Meets Durability</p>
                 <p className={styles.timeline_sec_comment}>
                   With a commitment to aesthetics and endurance, our aluminium
