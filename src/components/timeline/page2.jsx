@@ -109,7 +109,7 @@ const Page2 = () => {
                   <Image src={usp4} alt="image" className={styles.img_main} />
                 </div>
                 {/* <p className={styles.timeline_number}>04</p> */}
-                <h2 className={styles.twoo}>Furniture</h2>
+                <h2 className={styles.twoo}>Furniture & Hardware</h2>
                 <p className={styles.contentInner}>Design Meets Durability</p>
                 
                 <p className={styles.timeline_sec_comment}>
