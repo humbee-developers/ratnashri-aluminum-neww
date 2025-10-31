@@ -1,0 +1,134 @@
+.scrollingWordsContainer {
+  display: flex;
+  align-items: center;
+  // font-size: 2rem;
+  font-weight: 700;
+  height: 100vh;
+  justify-content: center;
+  @media (max-width: 575px) {
+    height: 80vh;
+  }
+}
+
+.AdvanceWord {
+  font-size: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 132, 199, 1) 0%,
+    rgba(2, 64, 97, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 700;
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+  @media (max-width: 575px) {
+    font-size: 40px;
+  }
+  @media (max-width: 475px) {
+    font-size: 30px;
+    padding-right: 10px;
+  }
+  @media (max-width: 350px) {
+    font-size: 25px;
+  }
+}
+.InnerWord {
+  font-size: 80px;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 132, 199, 1) 0%,
+    rgba(2, 64, 97, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  font-weight: 700;
+  // margin: 10px 0;
+
+  @media (max-width: 768px) {
+    font-size: 60px;
+  }
+  @media (max-width: 575px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 475px) {
+    font-size: 30px;
+  }
+  @media (max-width: 350px) {
+    font-size: 25px;
+  }
+}
+
+.scrollingWordsBox {
+  height: 5rem;
+  // height: auto;
+  // margin: auto;
+  overflow: hidden;
+  @media (max-width: 575px) {
+    height: 3rem;
+  }
+
+  ul {
+    margin: 0 0.625rem;
+    padding: 0;
+    // animation: scrollUp 6s infinite cubic-bezier(0.45, 0, 0.55, 1);
+
+    animation: scrollUp 5s infinite;
+    @media (max-width: 475px) {
+      margin: 0;
+    }
+  }
+
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 5rem;
+    list-style: none;
+    margin-left: 1rem;
+    @media (max-width: 768px) {
+      margin-left: 0rem;
+    }
+    @media (max-width: 575px) {
+      height: 3rem;
+    }
+  }
+}
+
+// Animation
+$item-count: 5;
+
+@keyframes scrollUp {
+  @for $i from 1 through ($item-count - 1) {
+    #{($i * 25) - 10%},
+    #{$i * 25%} {
+      transform: translateY(calc((-100% / #{$item-count}) * #{$i}));
+    }
+  }
+}
+// @keyframes scrollUp {
+//   @for $i from 1 through ($item-count - 1) {
+//     #{($i * 25) - 10%}, #{$i * 25%} {
+//       transform: translateY((-100% / $item-count) * $i);
+//     }
+//   }
+// }
+.TextWord {
+  p {
+    letter-spacing: 0.3px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 30px;
+    padding: 0 30px;
+    @media (max-width: 575px) {
+      padding: 0 20px;
+      font-size: 17px;
+      letter-spacing: normal;
+    }
+  }
+}

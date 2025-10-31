@@ -1,0 +1,122 @@
+.containerOne {
+  position: relative;
+  /* width: 100%;
+  max-width: 1200px; */
+  border-radius: 30px;
+  overflow: hidden;
+  margin: 0 90px;
+  cursor: pointer;
+  height: 70vh;
+}
+.containerOneText {
+  text-align: center;
+  margin: 0 auto;
+}
+.containerOneInner {
+  padding-bottom: 50px;
+  width: 60%;
+  margin: 0 auto;
+  font-size: 50px;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 132, 199, 1) 0%,
+    rgba(2, 64, 97, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.video {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 30px;
+  @media (max-width: 475px) {
+    border-radius: 0px;
+  }
+}
+
+.playButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, 0.25);
+  color: rgba(5, 132, 199, 1);
+  font-size: 2.2rem;
+  border: none;
+  border-radius: 50%;
+  padding: 25px 35px;
+  cursor: pointer;
+  z-index: 1;
+  pointer-events: none; /* So video still gets the click */
+}
+@media(min-width: 1550px){
+  .containerOne{
+    margin: 0 100px;
+  }
+}
+@media (max-width: 1300px) {
+  .containerOne {
+    height: 65vh;
+  }
+}
+@media (max-width: 1199px) {
+  .containerOne {
+    /* max-width: 900px; */
+    margin: 0 90px;
+  }
+  .containerOneInner {
+    width: 80%;
+  }
+}
+@media (max-width: 991px) {
+  .containerOne {
+    margin: 0 80px;
+    /* max-width: 600px; */
+  }
+  .containerOneInner {
+    width: 80%;
+    font-size: 40px;
+  }
+}
+@media (max-width: 767px) {
+  .containerOne {
+    height: 50vh;
+  }
+}
+@media (max-width: 575px) {
+  .playButton {
+    font-size: 1.5rem;
+    padding: 15px 25px;
+  }
+  .containerOneInner {
+    width: 90%;
+    font-size: 25px;
+    padding-bottom: 20px;
+  }
+  .containerOne {
+    margin: 0 50px;
+    /* max-width: 600px; */
+  }
+}
+@media (max-width: 475px) {
+  .containerOne {
+    margin: 0 30px;
+    height: 40vh;
+    /* max-width: 600px; */
+  }
+}
+@media (max-width: 475px) {
+  .containerOne {
+    margin: 0 0px;
+    height: 40vh;
+    padding-bottom: 5rem;
+    border-radius: 0px;
+    /* max-width: 600px; */
+  }
+}
+/* iframe{
+  border-radius: 30px;
+} */

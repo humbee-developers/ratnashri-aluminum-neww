@@ -1,0 +1,111 @@
+// @import "../fonts/fonts.scss";
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  padding: 0;
+  // background-color: white;
+  max-width: 100vw;
+  background-image: url("../images/Home_new_bg.png");
+  // background-size: 100% 100%;
+  background-attachment: fixed; 
+   background-position: center center; 
+  background-size: 100%;
+  // background-color: rgba(255, 255, 255, 1);
+  // background-repeat: no-repeat;
+  color: rgba(53, 53, 53, 1);
+  transition-property: opacity, transform, filter, background-color;
+  transition-timing-function: ease-in-out;
+  transition-duration: 800ms;
+  overflow-x: hidden;
+}
+.main {
+  overflow-x: hidden !important;
+}
+
+@font-face {
+  font-family: "LatoBlack";
+  src: local("LatoBlack"),
+    url("../../src/fonts/Lato-Black.ttf") format("truetype");
+  font-weight: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "BlackItalic";
+  src: local("BlackItalic"),
+    url("../../src/fonts/Lato-BlackItalic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LatoBold";
+  src: local("LatoBold"),
+    url("../../src/fonts/Lato-Bold.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoItalic";
+  src: local("LatoItalic"),
+    url("../../src/fonts/Lato-Italic.ttf") format("truetype");
+  font-display: swap;
+}
+@font-face {
+  font-family: "LatoLight";
+  src: local("LatoLight"),
+    url("../../src/fonts/Lato-Light.ttf") format("truetype");
+  font-display: swap;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "LatoRegular";
+  src: local("LatoRegular"),
+    url("../../src/fonts/Lato-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+h1 {
+  font-family: "LatoRegular";
+}
+h2 {
+  font-family: "LatoRegular";
+}
+h3 {
+  font-family: "LatoRegular";
+}
+h4 {
+  font-family: "LatoRegular";
+}
+h5 {
+  font-family: "LatoRegular";
+}
+h6 {
+  font-family: "LatoRegular";
+}
+a {
+  text-decoration: none;
+  font-family: "LatoRegular";
+}
+div {
+  font-family: "LatoRegular";
+}
+button {
+  font-family: "LatoRegular";
+}
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: "LatoRegular";
+  li {
+    font-family: "LatoRegular";
+  }
+}
+
+input {
+  font-family: "LatoRegular";
+}
+textarea {
+  font-family: "LatoRegular";
+}

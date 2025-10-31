@@ -1,0 +1,59 @@
+.FirstSectionWarpper {
+  color: #004878;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  height: 90vh;
+  overflow-x: hidden;
+  @media(max-width: 475px){
+    height: 80vh;
+  }
+  // #Background_Add{
+  //    background-image: url("../../images/Home_new_bg.png");
+  //     background-repeat: no-repeat;
+  //     background-size: 100% 100%;
+  //     padding: 100px 100px;
+  //     border-radius: 8px;
+  //     color: #0584c7;
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     justify-content: center;
+  //     @media(max-width: 1199px){
+  //       padding: 90px;
+  //     }
+  //     @media(max-width: 475px){
+  //       padding: 80px;
+  //     }
+  // }
+  .InnerSectionWrapper {
+    padding: 0 60px;
+    @media(max-width: 575px){
+      padding: 0 30px;
+    }
+    
+    .InnerWapper {
+      font-size: 60px;
+      width: 70%;
+      font-weight: 500;
+      background: linear-gradient(
+          90deg,
+          rgba(5, 132, 199, 1) 0%,
+          rgba(2, 64, 97, 1) 100%
+        );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      @media(max-width: 768px){
+        font-size: 40px;
+        width: 100%;
+      }
+      @media(max-width: 475px){
+      font-size: 25px;
+    }
+      
+    }
+    #Wrap{
+      font-weight: 800;
+    }
+  }
+}

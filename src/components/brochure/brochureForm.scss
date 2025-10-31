@@ -1,0 +1,80 @@
+.BrochureMain {
+  overflow-x: hidden;
+  padding: 80px 50px 0;
+  @media (max-width: 575px) {
+    padding: 80px 30px 0;
+  }
+  @media (max-width: 375px) {
+    padding: 80px 20px 0;
+  }
+  .BrochureInner {
+    border-radius: 10px;
+    padding: 40px 40px 60px 40px;
+    background-color: #edf3fa;
+  }
+  .BrochureInnerContent {
+    p {
+      font-size: 50px;
+      font-weight: 700;
+     
+      color: #003e5e;
+      @media (max-width: 575px) {
+        font-size: 35px;
+      }
+    }
+  }
+
+  .BrochureInput {
+    padding-top: 1rem;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+  }
+  /* From Uiverse.io by Madflows */
+  .button {
+    position: relative;
+    overflow: hidden;
+    height: 40px;
+    padding: 0 2.5rem;
+    border-radius: 8px;
+    background: #0584c7;
+    background-size: 400%;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-top: 3px;
+  }
+
+  .button:hover::before {
+    transform: scaleX(1);
+  }
+
+  .button-content {
+    position: relative;
+    z-index: 1;
+  }
+
+  .button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    background: rgb(2, 64, 97);
+    //   background: linear-gradient(
+    //     82.3deg,
+    //     rgba(150, 93, 233, 1) 10.8%,
+    //     rgba(99, 88, 238, 1) 94.3%
+    //   );
+    transition: all 0.475s;
+  }
+}

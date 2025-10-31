@@ -1,0 +1,221 @@
+.form {
+  // background-color: #1c211e;
+  padding: 100px 50px;
+  // display: flex;
+  width: 100%;
+  overflow-x: hidden !important;
+  // justify-content: space-evenly;
+  color: #000;
+
+  @media screen and (max-width: 800px) {
+    padding: 50px 0px;
+    flex-direction: column;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden !important;
+  }
+  .yello_btn {
+    border: 1px solid #000;
+    color: #000;
+  }
+  .ImgSec {
+    max-width: 100%;
+    height: auto;
+    // @media(max-width: 575px){
+    //   max-width: 85%;
+    // }
+  }
+}
+.FormInnerTextHeader {
+  width: 90%;
+  @media(max-width: 800px){
+    width: 80%;
+  }
+  @media (max-width: 575px) {
+    // padding: 0 20px;
+    width: 80%;
+  }
+}
+
+.form_header {
+  text-align: left;
+  margin-bottom: 50px;
+  font-size: 40px;
+  font-weight: 700;
+  background: linear-gradient(
+    90deg,
+    rgba(5, 132, 199, 1) 0%,
+    rgba(2, 64, 97, 1) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
+  // color: rgb(2, 64, 97);
+  width: 100%;
+  // @media (max-width: 1199px) {
+  //   font-size: 30px;
+  // }
+  @media(max-width: 768px){
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+  @media (max-width: 575px) {
+    font-size: 30px;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+
+}
+.HeaderTextMission{
+  p{
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "LatoLight";
+    padding-bottom: 1rem;
+    @media(max-width: 375px){
+      letter-spacing: 0.21px;
+        color: #353535;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 163.523%;
+    }
+  }
+}
+  .HeaderTextInnerText{
+    p{
+    font-size: 20px;
+    font-family: "LatoLight";
+    font-weight: 300;
+    padding-bottom: 3rem;
+    @media(max-width: 375px){
+      letter-spacing: 0.21px;
+        color: #353535;
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 163.523%;
+    }
+    }
+    
+  }
+
+.form_field_flex {
+  display: flex;
+  justify-content: space-between;
+  gap: 4rem;
+  margin-bottom: 20px;
+  @media screen and (max-width: 575px) {
+    flex-direction: column;
+    gap: 0rem;
+    margin-bottom: 0px;
+  }
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: #000 !important;
+}
+.form_content {
+  flex: 1;
+}
+
+.input-container {
+  position: relative;
+  margin: 10px 0;
+  width: 100%;
+  height: 85px;
+  @media screen and (max-width: 575px) {
+    height: 65px;
+    width: 93%;
+  }
+}
+
+.input-container input[type="text"],
+.input-container input[type="email"],
+.input-container textarea {
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  color: #000;
+  border-bottom: 1px solid #000;
+  padding: 8px 0;
+  background-color: transparent;
+  outline: none;
+  resize: none;
+  @media screen and (max-width: 575px) {
+    font-size: 16px;
+  }
+}
+
+.input-container .label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #000;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+.input-container input[type="text"]:focus ~ .label,
+.input-container input[type="email"]:focus ~ .label,
+.input-container input[type="text"].not-empty ~ .label,
+.input-container input[type="email"].not-empty ~ .label,
+.input-container textarea:focus ~ .label,
+.input-container textarea.not-empty ~ .label {
+  top: -20px;
+  font-size: 13px;
+  color: #000;
+}
+
+.message_field {
+  height: 100px;
+  @media screen and (max-width: 575px) {
+    height: 70px;
+  }
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  @media screen and (max-width: 575px) {
+    margin: 5px 0px;
+  }
+}
+.submit-button {
+  display: flex;
+  justify-content: flex-start;
+  padding-top: 4rem;
+  padding-bottom: 1rem;
+  @media screen and (max-width: 575px) {
+    padding-top: 3rem;
+    padding-bottom: 1rem;
+  }
+  .submit_button {
+    background-color: transparent;
+    color: #000;
+    padding: 15px 50px;
+    border: 1px solid #000;
+    font-size: 17px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: #555;
+    }
+  }
+}
+.form_footer {
+  margin: 30px 0px;
+  font-size: 21px;
+  width: 60%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
+}

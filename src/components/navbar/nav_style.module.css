@@ -1,0 +1,139 @@
+.header {
+  margin: 0px 44px 0px 0px;
+  position: fixed;
+  right: 0;
+  padding: 5px 30px;
+  background-color: #0584C7;
+  border-radius: 30px;
+  z-index: 30;
+  /* top: 3rem; */
+  top: 3.8rem;
+}
+.ImgBanner{
+  margin-top: 3rem;
+  margin-left: 3rem;
+}
+.ImgInner{
+  max-width: 100%;
+  height: auto;
+}
+.button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* border: 2px solid #fff; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button::after {
+  border: 2px solid #ffffff;
+}
+
+.burger {
+  width: 100%;
+}
+
+.burger::after,
+.burger::before {
+  content: "";
+  display: block;
+  height: 2px;
+  width: 65%;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  transition: transform 0.3s;
+}
+
+.burger::after {
+  top: -5px;
+}
+
+.burger::before {
+  top: 5px;
+}
+
+.burgerActive::after {
+  transform: rotate(45deg);
+  top: -1px;
+}
+
+.burgerActive::before {
+  transform: rotate(-45deg);
+  top: 0px;
+}
+
+@media (max-width: 991px) {
+  .header {
+    /* padding: 0px 44px 0px 0px; */
+    position: fixed;
+    right: 0;
+    z-index: 10;
+    /* top: 3rem; */
+    top: 4rem;
+    right: -1.2rem;
+  }
+
+  .button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* border: 2px solid #c3a464; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 787px) {
+  .header {
+    /* padding: 0px 44px 0px 0px; */
+    position: fixed;
+    right: 0;
+    z-index: 20;
+    /* top: 2rem; */
+     top: 3rem;
+    right: -1.2rem;
+  }
+  .ImgBanner{
+    margin-top: 2rem;
+  }
+
+
+
+  .button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    /* border: 2px solid #c3a464; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+@media(max-width: 575px){
+  .ImgBanner{
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.ImgInner{
+  max-width: 55%;
+  height: auto;
+}
+.header{
+  top: 2rem;
+  right: 0;
+  margin: 0px 25px 0 0;
+}
+
+}
+@media(max-width: 375px){
+  .header {
+    margin: 0 25px 0 0;
+    padding: 0 15px;
+  }
+}

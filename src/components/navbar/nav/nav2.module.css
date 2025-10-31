@@ -1,0 +1,153 @@
+.menu {
+  height: 100vh;
+  background-color: #0584C7;
+  position: fixed;
+  right: 0;
+  z-index: 18;
+  top: 0;
+  color: white;
+}
+
+.menu .body {
+  box-sizing: border-box;
+  height: 100%;
+  /* padding: 80px 45px 20px 115px; */
+  padding: 80px 54px 20px 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.menu .body .nav {
+  display: flex;
+  flex-direction: column;
+  font-size: 46px;
+  gap: 12px;
+  margin-top: 70px;
+}
+
+.menu .body .nav .header {
+  color: rgb(153, 153, 153);
+  border-bottom: 1px solid rgb(153, 153, 153);
+  text-transform: uppercase;
+  font-size: 11px;
+  margin-bottom: 40px;
+}
+
+.menu .body .nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 300;
+}
+
+.menu .body .nav a:hover{
+  /* background-color: #01625d; */
+  color:#fff;
+}
+
+@media(min-width:1600px) and  (max-width: 1920px) {
+  .menu .body .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 48px;
+    gap: 15px;  
+    margin-top: 80px;
+  }
+
+
+
+  .menu .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 80px 45px 20px 115px;
+    /* padding: 80px 54px 20px 100px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 787px) {
+  .menu .body .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 43px;
+    gap: 17px;
+    margin-top: 70px;
+  }
+}
+
+
+
+@media (max-width: 425px) {
+  .menu .body .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 39px;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+
+
+  .menu .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 80px 30px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+
+@media (max-width: 375px) {
+  .menu .body .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 38px;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+  .menu .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 80px 65px 20px 90px;
+    /* 80px 65px 20px 90px */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+
+
+
+
+
+@media (max-width: 320px) {
+  .menu .body .nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 38px;
+    gap: 20px;
+    margin-top: 20px;
+  }
+
+
+
+  .menu .body {
+    box-sizing: border-box;
+    height: 100%;
+    padding: 80px 40px 20px 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
