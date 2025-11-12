@@ -69,34 +69,36 @@ export default function Home() {
 
   //   return () => window.removeEventListener("hashchange", scrollToSection);
   // }, [pathname, searchParams]);
-   useEffect(() => {
-    const scrollToSection = () => {
-      const hash = window.location.hash;
 
-      if (pathname === "/" && hash === "#blogs-section") {
-        const el = document.getElementById("blogs-section");
+  
+  //  useEffect(() => {
+  //   const scrollToSection = () => {
+  //     const hash = window.location.hash;
 
-        if (el) {
-          // Delay to ensure DOM is ready
-          setTimeout(() => {
-            el.scrollIntoView({ behavior: "smooth", block: "start" });
+  //     if (pathname === "/" && hash === "#blogs-section") {
+  //       const el = document.getElementById("blogs-section");
 
-            // 👇 Remove the hash from the URL (without reloading)
-            history.replaceState(
-              null,
-              "",
-              window.location.pathname + window.location.search
-            );
-          }, 400);
-        }
-      }
-    };
+  //       if (el) {
+  //         // Delay to ensure DOM is ready
+  //         setTimeout(() => {
+  //           el.scrollIntoView({ behavior: "smooth", block: "start" });
 
-    scrollToSection();
+  //           // 👇 Remove the hash from the URL (without reloading)
+  //           history.replaceState(
+  //             null,
+  //             "",
+  //             window.location.pathname + window.location.search
+  //           );
+  //         }, 400);
+  //       }
+  //     }
+  //   };
 
-    window.addEventListener("hashchange", scrollToSection);
-    return () => window.removeEventListener("hashchange", scrollToSection);
-  }, [pathname, searchParams]);
+  //   scrollToSection();
+
+  //   window.addEventListener("hashchange", scrollToSection);
+  //   return () => window.removeEventListener("hashchange", scrollToSection);
+  // }, [pathname, searchParams]);
   return (
     <>
       <AnimatePresence
