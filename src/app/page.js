@@ -1,5 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
+import { usePathname, useSearchParams  } from "next/navigation";
 import FirstSection from "@/components/firstSection/page";
 import AboutExperience from "@/components/aboutExperience/AboutExperience";
 import "./globals.scss";
@@ -15,6 +16,7 @@ import BrochureForm from "@/components/brochure/brochureForm";
 import Form1 from "@/components/form1New/FormNew";
 import Preloader from "@/components/preloader/index";
 import VideoPlayer from "@/components/videoPlayerNew/videoplayerNew";
+import Blogs from "@/components/blogsCards/blogs";
 export default function Home() {
   // const [width, setWidth] = useState<number | null>(null);
   const [width, setWidth] = useState(null);
@@ -42,7 +44,59 @@ export default function Home() {
   }, []);
 // Render nothing for Factory until width is initialized
   // const FactoryComponent = width !== null ? (width > 575 ? <Factory /> : <FactoryTwo />) : null;
+ const pathname = usePathname();
+ const searchParams = useSearchParams();
+  
+  // useEffect(() => {
+  //   // 👇 Create a function to handle scroll when hash is present
+  //   const scrollToSection = () => {
+  //     const hash = window.location.hash;
+  //     if (pathname === "/" && hash === "#blogs-section") {
+  //       const el = document.getElementById("blogs-section");
+  //       if (el) {
+  //         // Small timeout ensures render completion
+  //         setTimeout(() => {
+  //           el.scrollIntoView({ behavior: "smooth", block: "start" });
+  //         }, 400);
+  //       }
+  //     }
+  //   };
 
+  //   scrollToSection();
+
+  //   // Handle hash changes dynamically too
+  //   window.addEventListener("hashchange", scrollToSection);
+
+  //   return () => window.removeEventListener("hashchange", scrollToSection);
+  // }, [pathname, searchParams]);
+   useEffect(() => {
+    const scrollToSection = () => {
+      const hash = window.location.hash;
+
+      if (pathname === "/" && hash === "#blogs-section") {
+        const el = document.getElementById("blogs-section");
+
+        if (el) {
+          // Delay to ensure DOM is ready
+          setTimeout(() => {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+
+            // 👇 Remove the hash from the URL (without reloading)
+            history.replaceState(
+              null,
+              "",
+              window.location.pathname + window.location.search
+            );
+          }, 400);
+        }
+      }
+    };
+
+    scrollToSection();
+
+    window.addEventListener("hashchange", scrollToSection);
+    return () => window.removeEventListener("hashchange", scrollToSection);
+  }, [pathname, searchParams]);
   return (
     <>
       <AnimatePresence
@@ -68,6 +122,7 @@ export default function Home() {
         <StickySection />
         <BrochureForm />
         <Form1 />
+        <Blogs />
       </main>
     </>
   );

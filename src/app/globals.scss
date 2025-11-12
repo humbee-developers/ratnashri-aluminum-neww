@@ -24,6 +24,10 @@ body {
 .main {
   overflow-x: hidden !important;
 }
+html {
+  scroll-behavior: smooth;
+}
+
 
 @font-face {
   font-family: "LatoBlack";
