@@ -1,6 +1,6 @@
 "use client"
 import { useState, useEffect } from "react";
-import { usePathname, useSearchParams  } from "next/navigation";
+// import { usePathname, useSearchParams  } from "next/navigation";
 import FirstSection from "@/components/firstSection/page";
 import AboutExperience from "@/components/aboutExperience/AboutExperience";
 import "./globals.scss";
@@ -44,8 +44,10 @@ export default function Home() {
   }, []);
 // Render nothing for Factory until width is initialized
   // const FactoryComponent = width !== null ? (width > 575 ? <Factory /> : <FactoryTwo />) : null;
- const pathname = usePathname();
- const searchParams = useSearchParams();
+
+  // BLOGS CODE
+//  const pathname = usePathname();
+//  const searchParams = useSearchParams();
   
   // useEffect(() => {
   //   // 👇 Create a function to handle scroll when hash is present
@@ -70,7 +72,7 @@ export default function Home() {
   //   return () => window.removeEventListener("hashchange", scrollToSection);
   // }, [pathname, searchParams]);
 
-  
+
   //  useEffect(() => {
   //   const scrollToSection = () => {
   //     const hash = window.location.hash;
