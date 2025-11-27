@@ -91,7 +91,7 @@ const AirpodsAnimation = ({ loadImage }) => {
     // const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
       // `${prefix}/Machine_Frames/${(
-      `/Mobile_Frames/${(index + 0).toString().padStart(3, "0")}.png`;
+      `https://storage.googleapis.com/dweck-cdn/ratnashri/Mobile_Frames/${(index + 0).toString().padStart(3, "0")}.png`;
     // https://plywoodassets.royaletouche.com/assets/newframes/factoryzoom/F000.webp
     // https://plywoodassets.royaletouche.com/assets/compressed/factoryzoom/F000.jpg
     let imgL = [];
