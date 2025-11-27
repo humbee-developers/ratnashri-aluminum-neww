@@ -162,7 +162,7 @@ const setCanvasSize = () => {
     // const prefix = process.env.NODE_ENV === "production" ? "/ratnashri-aluminum" : "";
     const currentFrame = (index) =>
       // `${prefix}/Machine_Frames/${(
-      `https://storage.googleapis.com/dweck-cdn/ratnashri/webp_frames/${(index + 1).toString().padStart(4, "0")}.webp`;
+      `https://storage.googleapis.com/dweck-cdn/ratnashri/compressed/webp_frames/${(index + 1).toString().padStart(4, "0")}.webp`;
     // https://plywoodassets.royaletouche.com/assets/newframes/factoryzoom/F000.webp
     // https://plywoodassets.royaletouche.com/assets/compressed/factoryzoom/F000.jpg
     let imgL = [];

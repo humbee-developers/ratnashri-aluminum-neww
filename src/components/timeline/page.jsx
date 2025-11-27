@@ -50,7 +50,7 @@ const Home = ({ loadUSP }) => {
 
     const frameCount = 314;
     const currentFrame = (index) =>
-      `https://storage.googleapis.com/dweck-cdn/ratnashri/our_expertise_new/${(index + 1).toString().padStart(3, "0")}.webp`;
+      `https://storage.googleapis.com/dweck-cdn/ratnashri/compressed/our_expertise_new/${(index + 1).toString().padStart(3, "0")}.webp`;
 
     imagesRef.current = []; // Clear in case re-renders
 
