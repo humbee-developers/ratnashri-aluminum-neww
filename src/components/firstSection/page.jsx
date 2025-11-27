@@ -2,16 +2,20 @@ import "./firstSection.scss";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const FirstSection = () => {
+const FirstSection = ({ startNow = false }) => {
   const [startAnimation, setStartAnimation] = useState(false);
 
   useEffect(() => {
+    if (startNow) {
+      setStartAnimation(true);
+      return;
+    }
+    // Fallback: if no preloader signal, start after a short delay
     const timer = setTimeout(() => {
       setStartAnimation(true);
-    }, 13000); // 8 seconds delay
-
-    return () => clearTimeout(timer); // cleanup
-  }, []);
+    }, 800);
+    return () => clearTimeout(timer);
+  }, [startNow]);
 
   return (
     <div className="FirstSectionWarpper" id="Background_Add">

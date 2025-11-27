@@ -33,6 +33,11 @@ const AirpodsAnimation = ({ loadImage }) => {
     //   if (windowWidth >= 1700) {
     //     canvas.width = 2000; // Width remains constant for desktop screens
     //     canvas.height = windowHeight * 1; // Adjust the height for desktop screens
+    // Only run desktop/tablet animation logic on non-mobile screens
+    const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 575px)").matches;
+    if (isMobile) {
+      return () => {};
+    }
     //   } else if (windowWidth >= 1600) {
     //     canvas.width = 1600; // Width remains constant for tablet screens
     //     canvas.height = windowHeight * 1; // Adjust the height for tablet screens
@@ -270,7 +275,7 @@ const setCanvasSize = () => {
   };
 
   return (
-    <section className={styles.fixed_bg_wrapper_factory} id={styles.DesktopFactory}>
+    <section className={`${styles.fixed_bg_wrapper_factory} ${styles.DesktopFactory}`}>
       <section ref={sectionRef}>
        <div>
         <motion.div

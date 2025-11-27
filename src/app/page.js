@@ -17,6 +17,9 @@ import Form1 from "@/components/form1New/FormNew";
 import Preloader from "@/components/preloader/index";
 import VideoPlayer from "@/components/videoPlayerNew/videoplayerNew";
 import Blogs from "@/components/blogsCards/blogs";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 export default function Home() {
   // const [width, setWidth] = useState<number | null>(null);
   const [width, setWidth] = useState(null);
@@ -34,13 +37,20 @@ export default function Home() {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
-  // Timer to hide the preloader after 5 seconds
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setIsLoading(false); // Set to false after 5 seconds
-    }, 10000); // 5000ms = 5 seconds
 
-    return () => clearTimeout(timer); // Clear the timer on cleanup
+  // Hide preloader on window load or after max 5 seconds
+  useEffect(() => {
+    const onLoad = () => setIsLoading(false);
+    if (document.readyState === "complete") {
+      setIsLoading(false);
+    } else {
+      window.addEventListener("load", onLoad);
+    }
+    const maxTimer = setTimeout(() => setIsLoading(false), 5000);
+    return () => {
+      window.removeEventListener("load", onLoad);
+      clearTimeout(maxTimer);
+    };
   }, []);
 // Render nothing for Factory until width is initialized
   // const FactoryComponent = width !== null ? (width > 575 ? <Factory /> : <FactoryTwo />) : null;
@@ -113,11 +123,10 @@ export default function Home() {
         }
       </AnimatePresence>
       <main className="main">
-        <FirstSection />
+        <FirstSection startNow={!isLoading} />
         <VideoPlayer />
         <Factory />
         <FactoryMobile />
-         {/* {width && width > 575 ? <Factory /> : <FactoryTwo />} */}
         <AboutExperience />
         <DifferenceSection />
         <Timeline />

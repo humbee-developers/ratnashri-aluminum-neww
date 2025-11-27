@@ -18,10 +18,10 @@
   overflow: hidden;
   position: relative; /* required for pseudo-element */
 }
-#DesktopFactory {
+.DesktopFactory {
   display: block;
 }
-#MobileFactory {
+.MobileFactory {
   display: none;
 }
 
@@ -231,10 +231,10 @@
 }
 
 @media (max-width: 575px) {
-  #DesktopFactory {
+  .DesktopFactory {
     display: none;
   }
-  #MobileFactory {
+  .MobileFactory {
     display: block;
   }
   .PrecisionHeadingSec {

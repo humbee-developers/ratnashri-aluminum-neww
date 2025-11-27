@@ -20,6 +20,12 @@ const AirpodsAnimation = ({ loadImage }) => {
   console.log("factory loading", loading);
 
   useEffect(() => {
+    // Only run mobile animation logic on mobile screens
+    const isMobile = typeof window !== "undefined" && window.matchMedia("(max-width: 575px)").matches;
+    if (!isMobile) {
+      return () => {};
+    }
+
     const section = sectionRef.current;
     const canvas = canvasRef.current;
     const text = textRef.current;
@@ -231,7 +237,7 @@ const AirpodsAnimation = ({ loadImage }) => {
   };
 
   return (
-    <section className={styles.fixed_bg_wrapper_factory} id={styles.MobileFactory}>
+    <section className={`${styles.fixed_bg_wrapper_factory} ${styles.MobileFactory}`}>
       <section ref={sectionRef}>
        <div>
         <motion.div
