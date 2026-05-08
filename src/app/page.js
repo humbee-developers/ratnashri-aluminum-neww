@@ -115,9 +115,7 @@ export default function Home() {
       <main className="main">
         <FirstSection />
         <VideoPlayer />
-        <Factory />
-        <FactoryMobile />
-         {/* {width && width > 575 ? <Factory /> : <FactoryTwo />} */}
+        {width === null ? null : width > 575 ? <Factory /> : <FactoryMobile />}
         <AboutExperience />
         <DifferenceSection />
         <Timeline />

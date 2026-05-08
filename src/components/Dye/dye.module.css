@@ -1,22 +1,25 @@
-.canvas_factory_settings{
-  height: 100vh;
+.canvas_factory_settings {
   width: 100%;
-  object-fit: cover;
-  margin-top: -50px;
-  object-position: center;
+  height: 62vh;
+  display: block;
 }
+
 .fixed_bg_wrapper {
   width: 100%;
+  position: relative;
+}
+
+.dye_scroll_wrapper {
+  min-height: 600vh;
+  position: relative;
+}
+
+.dye_sticky {
+  position: sticky;
+  top: 0;
+  height: 100vh;
   overflow: hidden;
-  position: relative; /* required for pseudo-element */
-  /* background-image: url("../../images/Home_new_bg.png");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center center;
-  padding-top: 150px;
-  width: 100%;
-  overflow: hidden; */
+  padding-top: 20px;
 }
 .fixed_bg_wrapper::before {
   content: "";

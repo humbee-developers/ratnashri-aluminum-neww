@@ -22,7 +22,7 @@ body {
   overflow-x: hidden;
 }
 .main {
-  overflow-x: hidden !important;
+  overflow-x: clip;
 }
 html {
   scroll-behavior: smooth;

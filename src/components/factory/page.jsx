@@ -195,7 +195,11 @@ const setCanvasSize = () => {
         duration: 1,
       });
 
-    imagesRef.current[0].onload = render;
+    if (imagesRef.current[0].complete) {
+      render();
+    } else {
+      imagesRef.current[0].onload = render;
+    }
 
     function render() {
       context.clearRect(0, 0, canvas.width, canvas.height);
